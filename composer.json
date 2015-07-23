@@ -1,0 +1,16 @@
+{
+    "name": "tlangelani/sybase-database",
+    "description": "A simple database package for Sybase/SAP ASE",
+    "keywords": ["database", "sybase", "sap", "sybase ase", "sap ase"],
+    "authors": [
+        {
+            "name": "Tlangelani Mboweni",
+            "email": "mbowenit@gmail.com",
+            "homepage": "http://www.tlangelani.co.za",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
