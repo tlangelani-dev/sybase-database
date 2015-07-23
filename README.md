@@ -17,6 +17,9 @@ $sybase = new Sybase('DEV_HOST', 'DEV_DB', 'USER', 'PASS');
 // run query
 $users = $sybase->query('SELECT * FROM users');
 
+// run query with and return data as object
+$users = $sybase->query('SELECT * FROM users', 'OBJ');
+
 print_r( $users );
 
 ```
