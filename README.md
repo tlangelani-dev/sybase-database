@@ -14,6 +14,15 @@ use Tlangelani\Database\Sybase;
 // NB: DEV_HOST must be configured on your sybase interfaces file, or freetds conf file.
 $sybase = new Sybase('DEV_HOST', 'DEV_DB', 'USER', 'PASS');
 
+// list databases
+$dbs = $sybase->getDB();
+
+// list database tables
+$tables = $sybase->getTables('live_db');
+
+// list table columns
+$columns = $sybase->getTableColumns('users');
+
 // run query
 $users = $sybase->query('SELECT * FROM users');
 

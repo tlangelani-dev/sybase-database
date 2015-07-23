@@ -49,6 +49,40 @@ class Sybase {
         return $this->conn;
     }
     
+    public function getDB() {
+        $dbInfo = $this->query('exec sp_helpdb', 'OBJ');
+        foreach($dbInfo as $info) {
+            $data[] = $info->name;
+        }
+        return $data;
+    }
+    
+    public function getTables($db) {
+        $tables = array();
+        $this->selectDB($db);
+        $sql = "SELECT name FROM sysobjects WHERE type = 'U' ORDER BY name";
+        $data = $this->query($sql);
+        foreach($data as $info) {
+            $tables[] = $info['name'];
+        }
+        return $tables;
+    }
+    
+    public function getTableColumns($table) {
+        $columns = array();
+        $sql = "
+            SELECT sc.name
+            FROM syscolumns sc
+            INNER JOIN sysobjects so ON sc.id = so.id
+            WHERE so.name = '$table'
+        ";
+        $data = $this->query($sql);
+        foreach($data as $info) {
+            $columns[] = $info['name'];
+        }
+        return $columns;
+    }
+    
     public function query($sql, $fetchType = 'ASSOC') {
         
         // clear data array
