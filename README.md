@@ -8,6 +8,10 @@ This will assume you already installed php sybase_ct extension using Sybase clie
 First, create a new "Capsule" manager instance. Capsule aims to make configuring the library for usage outside of the Laravel framework as easy as possible.
 
 ```PHP
+
+// add Sybase class to your project, you can use composer autoload as well
+require 'Sybase.php';
+
 use Tlangelani\Database\Sybase;
 
 // initialize sybase with credentials.
