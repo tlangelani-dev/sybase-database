@@ -1,7 +1,7 @@
 # Sybase/SAP ASE Database
 This package allows you to connect your PHP applications to Sybase/SAP ASE database.
 
-This will assume you already installed PHP [sybase_ct](http://php.net/manual/en/book.sybase.php) extension using Sybase client libraries or [FreeTDS](http://www.freetds.org/) libraries.
+This will assume you already installed [PHP sybase_ct](http://php.net/manual/en/book.sybase.php) extension using Sybase client libraries or [FreeTDS](http://www.freetds.org/) libraries.
 
 ### Usage:
 

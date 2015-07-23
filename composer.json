@@ -1,5 +1,5 @@
 {
-    "name": "tlangelani-dev/sybase-database",
+    "name": "tlangelani/sybase-database",
     "description": "A simple database package for Sybase/SAP ASE",
     "keywords": ["database", "sybase", "sap", "sybase ase", "sap ase"],
     "authors": [
