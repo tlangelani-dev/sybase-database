@@ -57,6 +57,12 @@ class Sybase {
         return $data;
     }
     
+    public function version() {
+        $sql = "select @@version as version";
+        $v = $this->query($sql);
+        return $v[0]['version'];
+    }
+    
     public function getTables($db) {
         $tables = array();
         $this->selectDB($db);
@@ -98,6 +104,11 @@ class Sybase {
         
         return $this->data;
     }
+    
+    // TODO
+    public function insert($table, array $data);
+    public function update($table, array $data);
+    public function delete($table, $id);
     
     /**
      * This function will fetch results based on user fetch type.
