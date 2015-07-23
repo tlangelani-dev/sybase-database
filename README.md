@@ -1,7 +1,7 @@
 # Sybase/SAP ASE Database
 This package allows you to connect your PHP applications to Sybase/SAP ASE database.
 
-This will assume you already installed php sybase_ct extension using Sybase client libraries or FreeTDS libraries.
+This will assume you already installed PHP [sybase_ct](http://php.net/manual/en/book.sybase.php) extension using Sybase client libraries or [FreeTDS](http://www.freetds.org/) libraries.
 
 ### Usage:
 
@@ -12,8 +12,8 @@ require 'Sybase.php';
 
 use Tlangelani\Database\Sybase;
 
-// initialize sybase with credentials.
-// NB: DEV_HOST must be configured on your sybase interfaces file, or freetds conf file.
+// initialize Sybase with credentials.
+// NB: DEV_HOST must be configured in your Sybase interfaces file, or freetds conf file.
 $sybase = new Sybase('DEV_HOST', 'DEV_DB', 'USER', 'PASS');
 
 // list databases
@@ -31,6 +31,5 @@ $users = $sybase->query('SELECT * FROM users');
 // run query with and return data as object
 $users = $sybase->query('SELECT * FROM users', 'OBJ');
 
-print_r( $users );
 
 ```
